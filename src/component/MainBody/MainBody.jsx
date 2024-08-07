@@ -6,7 +6,7 @@ const MainBody = () => {
   return (
     <div className="main">
       <div className="nav">
-        <div>Sylus</div>
+        <div>Sylus AI</div>
         <img src={assets.user_icon} alt="User Icon" />
       </div>
       <div className="mainContainer">
@@ -52,8 +52,8 @@ const MainBody = () => {
             </div>
           </div>
           <div className="bottomInfo">
-            Sylus may display inaccurate info, including about people, so
-            double-check its responses. Your privacy and Sylus Apps.
+            Sylus AI may display inaccurate info, including about people, so
+            double-check its responses.
           </div>
         </div>
       </div>
