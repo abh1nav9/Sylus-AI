@@ -1,9 +1,14 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./SideBar.css";
 import { assets } from "../../assets/assets";
+import { Context } from "../../context/Context";
 
 const SideBar = () => {
   const [extended, setExtended] = useState(false);
+  const {input} = useContext(Context);
+  const words = input.split(' ');
+  const firstThreeWords = words.slice(0, 1).join(' ');
+  const short = firstThreeWords + "...";
 
   return (
     <div className="sidebar">
@@ -23,7 +28,7 @@ const SideBar = () => {
             <div className="recentTitle">Recent</div>
             <div className="recentEntry">
               <img src={assets.message_icon} alt="Message Icon" />
-              <div>What is React ...</div>
+              <div>{short}</div>
             </div>
           </div>
         ) : null}
