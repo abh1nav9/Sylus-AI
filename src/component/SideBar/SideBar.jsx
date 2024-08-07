@@ -1,36 +1,41 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './SideBar.css';
 import {assets} from '../../assets/assets';
 
 const SideBar = () => {
+
+const [extended, setExtended] = useState(false);
+
   return (
     <div className='sidebar'>
         <div className="top">
-            <img className='menu' src={assets.menu_icon} alt='MenuBar' />
+            <img onClick={() => setExtended(prev => !prev)} className='menu' src={assets.menu_icon} alt='MenuBar' />
             <div className="newChat">
                 <img src={assets.plus_icon} alt='Plus Icon' />
-                <div>New Chat</div>
+                {extended ? <div>New Chat</div> : null }
             </div>
-            <div className="recent">
-                <div className="recentTitle">Recent</div>
-                <div className="recentEntry">
-                    <img src={assets.message_icon} alt='Message Icon' />
-                    <div>What is React ...</div>
-                </div>
-            </div>
+            { extended ?
+             <div className="recent">
+                 <div className="recentTitle">Recent</div>
+                 <div className="recentEntry">
+                     <img src={assets.message_icon} alt='Message Icon' />
+                     <div>What is React ...</div>
+                 </div>
+             </div>
+            : null }
         </div>
         <div className="bottom">
             <div className="bottomItem recentEntry">
                 <img src={assets.question_icon} alt='Question Icon' />
-                <div>Help</div>
+                {extended ? <div>Help</div> : null }
             </div>
             <div className="bottomItem recentEntry">
                 <img src={assets.history_icon} alt='History Icon' />
-                <div>Activity</div>
+                {extended ? <div>Activity</div> : null }
             </div>
             <div className="bottomItem recentEntry">
                 <img src={assets.setting_icon} alt='Setting Icon' />
-                <div>Setting</div>
+                {extended ? <div>Setting</div> : null }
             </div>
         </div>
     </div>
