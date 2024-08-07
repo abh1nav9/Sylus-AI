@@ -11,7 +11,7 @@ const MainBody = () => {
         </div>
         <div className="mainContainer">
             <div className="greet">
-                <div><span>Hola Amigo</span></div>
+                <div><div className='span'>Hello There</div></div>
                 <div>How can I help you today?</div>
             </div>
             <div className="cards">
@@ -21,7 +21,7 @@ const MainBody = () => {
                 </div>
                 <div className="card">
                     <div>Briefly summarize this concept: urban planning</div>
-                    <img src={assets.buld_icon} alt='Bulb Icon' />
+                    <img src={assets.bulb_icon} alt='Bulb Icon' />
                 </div>
                 <div className="card">
                     <div>Brainstorm team bonding activities for our work retreat</div>
