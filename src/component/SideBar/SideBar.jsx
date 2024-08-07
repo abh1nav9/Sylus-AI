@@ -6,9 +6,24 @@ const SideBar = () => {
   return (
     <div className='sidebar'>
         <div className="top">
-            <img src={assets.menu_icon} alt=''></img>
+            <img className='menu' src={assets.menu_icon} alt='MenuBar' />
+            <div className="newChat">
+                <img src={assets.plus_icon} alt='Plus Icon' />
+                <div>New Chat</div>
+            </div>
+            <div className="recent">
+                <div className="recentTitle">Recent</div>
+                <div className="recentEntry">
+                    <img src={assets.message_icon} alt='Message Icon' />
+                    <div>What is React ...</div>
+                </div>
+            </div>
         </div>
-        <div className="bottom"></div>
+        <div className="bottom">
+            <div className="bottomItem">
+                <img src={assets.question_icon} alt='Question Icon' />
+            </div>
+        </div>
     </div>
   )
 }
