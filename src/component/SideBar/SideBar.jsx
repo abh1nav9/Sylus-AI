@@ -5,10 +5,7 @@ import { Context } from "../../context/Context";
 
 const SideBar = () => {
   const [extended, setExtended] = useState(false);
-  const {input} = useContext(Context);
-  const words = input.split(' ');
-  const firstThreeWords = words.slice(0, 1).join(' ');
-  const short = firstThreeWords + "...";
+  const { onSent, prevPrompts, setRecentPromt } = useContext(Context);
 
   return (
     <div className="sidebar">
@@ -26,10 +23,14 @@ const SideBar = () => {
         {extended ? (
           <div className="recent">
             <div className="recentTitle">Recent</div>
-            <div className="recentEntry">
-              <img src={assets.message_icon} alt="Message Icon" />
-              <div>{short}</div>
-            </div>
+            {prevPrompts.map((item, index) => {
+              return (
+                <div className="recentEntry">
+                  <img src={assets.message_icon} alt="Message Icon" />
+                  <div>{item.slice(0,18)}</div>
+                </div>
+              );
+            })}
           </div>
         ) : null}
       </div>
