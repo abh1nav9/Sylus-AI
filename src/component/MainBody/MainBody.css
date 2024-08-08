@@ -234,8 +234,8 @@
     }
 
     .main .mainBottom {
-        padding: 8px 10px; 
-        position: sticky;
+        padding: 8px 10px 0px 10px; 
+        position: fixed;
         bottom: 0;
         background-color: #fff; 
         z-index: 1000; 
@@ -256,8 +256,8 @@
 
 @media (max-width: 600px) {
     .main .mainBottom {
-        padding: 5px 10px; 
-        position: sticky;
+        padding: 5px 10px 0px 10px; 
+        position: fixed;
         bottom: 0;
         background-color: #fff; 
         z-index: 1000; 
