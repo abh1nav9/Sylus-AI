@@ -265,7 +265,7 @@
 
     .main .mainBottom .searchBox input {
         flex: none;
-        width: 130px; 
+        width: 300px; 
         font-size: 14px;
     }
 
